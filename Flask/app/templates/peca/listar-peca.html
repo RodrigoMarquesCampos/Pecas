@@ -1,0 +1,43 @@
+{% include 'base/head.html' %}
+{% include 'base/nav_bar.html' %}
+
+<h3 class="text-center">Listar Peças</h3>
+<hr>
+<div class="table-responsive ">
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Valor Compra</th>
+            <th>Valor Venda</th>
+            <th>Quantidade</th>
+            <th>Ações</th>
+        </tr>
+        {% for p in peca %}
+        <tr>
+            <td>
+                {{ p.nome }}
+            </td>
+            <td>
+                {{ p.descricao }}
+            </td>
+            <td>
+                {{ p.valorVenda }}
+            </td>
+            <td>
+                {{ p.valorCompra }}
+            </td>
+            <td>
+                {{ p.qtde }}
+            </td>
+            <td>
+                <a href="{{ url_for('atualizar_peca', id=p.id)}}"<span class="glyphicon glyphicon-pencil"></span></a>
+                <a href="{{ url_for('apaga_peca', id=p.id)}}"><span class="glyphicon glyphicon-remove"></span></a>
+            </td>
+            </tr>
+                {% endfor %}
+    </table>
+</div>
+
+
+{% include 'base/footer.html' %}

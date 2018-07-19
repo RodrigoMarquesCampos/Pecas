@@ -1,0 +1,71 @@
+- Instalar IDE
+    ***
+
+- Criar projeto 'python puro' com exatamente o nome "BancoDeQuestoes"
+
+- Preparar o Git
+- Ir para dentro de BancoDeQuestoes.
+- Dentro do projeto criado ir para o venv
+
+git init
+git clone https://github.com/EmersonPereiraOliveira/BancoDeQuestoes.git
+
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git push origin master
+git remote add origin https://github.com/EmersonPereiraOliveira/BancoDeQuestoes
+git push origin master
+
+
+#Desconsiderar
+- Instalar Workon
+$ pip install virtualenvwrapper
+$ export WORKON_HOME=~/Envs
+$ mkdir -p $WORKON_HOME
+$ source /usr/local/bin/virtualenvwrapper.sh
+$ mkvirtualenv banco --python=/usr/bin/python3.5
+$ workon banco
+
+(SEMPRE DENTRO DO VENV E COM O AMBIENTE VIRTUAL ATIVADO)
+
+
+
+pip install -r requirements.txt
+pip freeze < requirements.txt
+
+#####################################
+Faça!
+
+$ pip install -r requirements.txt
+Para verificar que o servidor está rodando, faça:
+$ python run.py runserver
+
+127.0.0.1:5000
+
+
+##############
+Todos na versão pip3 e python3.5
+
+pip install flask
+pip install Flask-SQLAlchemy
+pip install Flask-script
+pip install Flask-migrate
+pip install Flask-wtf
+
+
+25-04-2018
+
+##### Banco de Dados
+
+$ python run.py db init #Criar a pasta migrations...
+$ python3 run.py db migrate # Mapeia o models e cria o banco de dados
+$ python3 run.py db upgrade # "Torna persistente"
+
+
+### sqlite3
+$ sqlite3 storage.db #Ver o banco de dados - sqlite3 nomeDobanco
+$ .tables # == select * from table.... ver tabelas
+
+# Existe ainda um bug... caso uma alteração seja feita em alguma tabela q já exista
+# o orm não permite. Até encontrarmos a solução o jeito é caso isso aconteça, apagar
+# todo o migrate e storage.db e criar o db de novo...

@@ -1,0 +1,38 @@
+{% include 'base/head.html' %}
+{% include 'base/nav_bar.html' %}
+
+    {% block content %}
+
+    <h3 class="text-center">Cadastrar Peça</h3>
+    <hr>
+
+        <form class="form-group" action="/novapeca" method="POST">
+            <div class="col-md-5">
+                <label>Nome</label>
+                {{ form_peca.nome(class="form-control", placeholder="Insira o nome") }}
+            </div>
+            <div class="col-md-7">
+                <label>Descricao</label>
+                {{ form_peca.descricao(class="form-control", placeholder="Insira a descricao") }}
+                <br>
+            </div>
+            <div class="col-md-4">
+                <label>Valor Compra</label>
+                {{ form_peca.valorCompra(class="form-control", placeholder="Insira o valor de compra da Peca") }}
+            </div>
+            <div class="col-md-4">
+                <label>Valor Venda</label>
+                {{ form_peca.valorVenda(class="form-control", placeholder="Insira o valor de venda") }}
+            </div>
+            <div class="col-md-4">
+                <label>Quantidade</label>
+                {{ form_peca.qtde(class="form-control", placeholder="Insira a quantidade") }}
+                <br>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </form>
+    {% endblock%}
+
+{% include 'base/footer.html' %}
