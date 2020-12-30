@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">API de controle de Peças</h1>
+    <h1 align="center">Peças</h1>
     <br>
 </p>
 
@@ -17,4 +17,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Peças é uma API de controle de peças proveniente de um trabalho avaliativo da discipilna de Arquitetura de Software
+Peças é uma aplicação de controle de peças proveniente de um trabalho avaliativo da discipilna de Arquitetura de Software, onde o desafio foi criar e consumir uma API utilizando a linguagem de programação Python e o framework Flask
